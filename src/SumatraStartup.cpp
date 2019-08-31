@@ -1,6 +1,7 @@
 /* Copyright 2018 the SumatraPDF project authors (see AUTHORS file).
    License: GPLv3 */
-
+//SumatraProperties.h
+//
 #include "utils/BaseUtil.h"
 #include "utils/ScopedWin.h"
 #include "utils/WinDynCalls.h"
@@ -171,6 +172,7 @@ static bool RegisterWinClass() {
     wcex.style |= CS_DBLCLKS;
     atom = RegisterClassEx(&wcex);
     CrashIf(!atom);
+    
 
     FillWndClassEx(wcex, PROPERTIES_CLASS_NAME, WndProcProperties);
     wcex.hIcon = LoadIcon(GetModuleHandle(nullptr), MAKEINTRESOURCE(IDI_SUMATRAPDF));
